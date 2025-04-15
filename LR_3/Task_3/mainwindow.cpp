@@ -15,8 +15,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_clicked()
 {
-    ui->lineEdit_2->clear();
-    double num = ui->doubleSpinBox->value();
-    ui->lineEdit_2->setText("Результат: " + Solution::BinaryRepresentation(num));
+    ui->lineEdit->clear();
+    ui->lineEdit->setText(QString::number(Solution::Reverse(number)));
 }
 

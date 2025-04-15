@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include "solution.h"
+#include <QString>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {

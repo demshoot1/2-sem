@@ -15,8 +15,8 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_clicked()
 {
-    ui->lineEdit_2->clear();
-    double num = ui->doubleSpinBox->value();
-    ui->lineEdit_2->setText("Результат: " + Solution::BinaryRepresentation(num));
+    ui->textEdit->clear();
+    int amount = ui->spinBox->value();
+    ui->textEdit->setText(Solution::hanoi(amount, 'A', 'B', 'C'));
 }
 

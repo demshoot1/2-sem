@@ -15,8 +15,9 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_clicked()
 {
-    ui->lineEdit_2->clear();
-    double num = ui->doubleSpinBox->value();
-    ui->lineEdit_2->setText("Результат: " + Solution::BinaryRepresentation(num));
+    ui->lineEdit->clear();
+    int m = ui->spinBox->value();
+    int n = ui->spinBox_2->value();
+    ui->lineEdit->setText(QString::number(Solution::AccermanFunction(m, n)));
 }
 
