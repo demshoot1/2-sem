@@ -1,21 +1,24 @@
-QT = core
+QT       += core gui
 
-CONFIG += c++17 cmdline
+greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+
+CONFIG += c++11
 
 # You can make your code fail to compile if it uses deprecated APIs.
 # In order to do so, uncomment the following line.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-        binaryoperation.cpp \
-        expression.cpp \
-        main.cpp \
-        number.cpp
+    main.cpp \
+    mainwindow.cpp \
+    sort.cpp
 
 HEADERS += \
-        binaryoperation.h \
-        expression.h \
-        number.h
+    mainwindow.h \
+    sort.h
+
+FORMS += \
+    mainwindow.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

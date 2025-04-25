@@ -1,6 +1,6 @@
-#include "../task3/expression.h"
-#include "../task3/number.h"
-#include "../task3/binaryoperation.h"
+#include "expression.h"
+#include "binaryoperation.h"
+#include "number.h"
 
 #include <iostream>
 
@@ -10,7 +10,7 @@ bool check_equals(Expression const* left, Expression const* right) {
            (left->isBinaryOperation() && right->isBinaryOperation());
 }
 
-int main(/*int argc, char *argv[]*/){
+int main(){
     Expression* sube = new BinaryOperation(new Number(4.5), '*', new Number(5));
     Expression* expr = new BinaryOperation(new Number(3), '+', sube);
     std::cout << expr->evaluate() << std::endl;
